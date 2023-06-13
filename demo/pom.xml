@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+							https://maven.apache.org/xsd/maven-4.0.0.xsd">
+							
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com</groupId>
+  <artifactId>demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+  
+  <!-- versions of the corresponding plugins-->
+  	<maven-compiler-plugin>3.11.0</maven-compiler-plugin>
+  	<source>1.8</source>
+  	<target>1.8</target>
+  	<maven-surefire-plugin>3.0.0</maven-surefire-plugin>
+  	
+  </properties>
+  
+  <build>
+  
+  	<plugins>
+  	
+  		<plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-compiler-plugin</artifactId>
+        	<version>${maven-compiler-plugin}</version>
+        	<configuration>
+          		<source>${source}</source>
+          		<target>${target}</target>
+        	</configuration>
+      	</plugin>
+      
+  		<plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-surefire-plugin</artifactId>
+        	<version>${maven-surefire-plugin}</version>
+        	<configuration>
+          		<suiteXmlFiles>
+            		<suiteXmlFile>testng.xml</suiteXmlFile>
+          		</suiteXmlFiles>
+        	</configuration>
+      	</plugin>
+      
+  	</plugins>
+  	
+  </build>
+  
+  <dependencies>
+  
+  	<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>4.3.1</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.0.5</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.9.1</version>
+	</dependency>
+	
+	<dependency>
+    		<groupId>org.testng</groupId>
+    		<artifactId>testng</artifactId>
+    		<version>7.4.0</version>
+    		<scope>compile</scope>
+	</dependency>
+	
+	<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.9</version>
+	</dependency>
+	
+	<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.9</version>
+	</dependency>
+		
+	<dependency>
+    		<groupId>javax.mail</groupId>
+    		<artifactId>javax.mail-api</artifactId>
+    		<version>1.5.6</version>
+	</dependency>
+	
+<!--<dependency>
+    <groupId>jakarta.mail</groupId>
+    <artifactId>jakarta.mail-api</artifactId>
+    <version>2.1.1</version>
+</dependency>-->
+<!--
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>javax.mail-api</artifactId>
+    <version>1.4.7</version>
+</dependency>
+<dependency>
+    <groupId>com.sun.mail</groupId>
+    <artifactId>javax.mail</artifactId>
+    <version>1.4.7</version>
+</dependency>
+-->
+
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-email</artifactId>
+    <version>1.5</version>
+</dependency>
+		
+  </dependencies>
+  
+</project>

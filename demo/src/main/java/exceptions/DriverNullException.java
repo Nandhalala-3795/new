@@ -1,0 +1,43 @@
+package exceptions;
+
+/**
+ * Runtime exception occurs when a already a driver is null.
+ * 
+ * @author Nandhalala.
+ * @created on MAR 28,2023.
+ * 
+ * @Last_Modified_by.
+ * @Last_Modified_on.
+ * 
+ * @version 1.0.
+ * @since 1.0.
+ */
+
+public class DriverNullException  extends NullPointerException{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1666629886862472816L;
+
+	/**
+	 * Pass the message that needs to be appended to the stacktrace.
+	 * 
+	 * @author Nandhalala.
+	 * @created on MAR 28,2023.
+	 * 
+	 * @param message Details about exception or custom message.
+	 * 
+	 * @Last_Modified_by.
+	 * @Last_Modified_on.
+	 * 
+	 * @since 1.0.
+	 */
+	public DriverNullException(String message) {
+		
+		super(message);
+	
+	}
+
+	
+}
